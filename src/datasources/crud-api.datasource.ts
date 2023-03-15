@@ -10,17 +10,21 @@ const config = {
     headers: {
       accept: 'application/json',
       'content-type': 'application/json',
-      Cookie: 'userId={u=1:number}',
+      Cookie: 'userId=1',
     },
   },
   operations: [
     {
       template: {
         method: 'GET',
+        headers: {
+          'content-type': 'application/json',
+          Authorization: '{token}',
+        },
         url: 'http://localhost:3000/users',
       },
       functions: {
-        getAllUsers: [],
+        getAllUsers: ['token'],
       },
     },
   ],

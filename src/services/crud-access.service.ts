@@ -6,7 +6,7 @@ export interface CrudAccess {
   // this is where you define the Node.js methods that will be
   // mapped to REST/SOAP/gRPC operations as stated in the datasource
   // json file.
-  getAllUsers(): Promise<object>;
+  getAllUsers(token: string): Promise<object>;
 }
 
 export class CrudAccessProvider implements Provider<CrudAccess> {
