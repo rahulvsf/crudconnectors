@@ -10,6 +10,7 @@ const config = {
     headers: {
       accept: 'application/json',
       'content-type': 'application/json',
+      Cookie: 'userId={u=1:number}',
     },
   },
   operations: [
